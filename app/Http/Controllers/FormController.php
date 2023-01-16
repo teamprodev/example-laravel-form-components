@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
+    /**
+     *
+     * Function  postMethod
+     * @param FormComponentRequest $request
+     * @return  RedirectResponse
+     */
     final public function postMethod(FormComponentRequest $request) : RedirectResponse
     {
         $request->validated();
