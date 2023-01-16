@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::post('/post/method', [FormController::class,'postMethod'])->name('post.form');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
